@@ -4,12 +4,12 @@ class Person_ {
     var fullName: String {
         return "\(firstName) \(lastName)"
     }
-
+    
     init(firstName: String, lastName: String) {
         self.firstName = firstName
         self.lastName = lastName
     }
-
+    
     func goForARun() {
         print("I love running!")
     }
@@ -26,7 +26,7 @@ struct Person {
     var fullName: String {
         return "\(firstName) \(lastName)"
     }
-
+    
     func goForARun() {
         print("I love running!")
     }
@@ -44,7 +44,7 @@ class PersonReference {
     var fullName: String {
         return "\(firstName) \(lastName)"
     }
-
+    
     init(firstName: String, lastName: String) {
         self.firstName = firstName
         self.lastName = lastName
@@ -91,14 +91,14 @@ func fillMug_(mug: Mug_) {
 
 let myMug_ = Mug_()
 print(myMug_.amountOfCoffee)
-fillMug_(myMug_)
+fillMug_(mug: myMug_)
 print(myMug_.amountOfCoffee)
 
 
 
 struct Mug {
     var amountOfCoffee: Double = 0.0
-
+    
     mutating func fillMug() {
         amountOfCoffee = 10.0
     }
